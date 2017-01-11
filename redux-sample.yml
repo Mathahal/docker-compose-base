@@ -1,3 +1,5 @@
+# docker-compose -f redux-sample.yml stop
+
 version: '2'
 
 services:
@@ -17,7 +19,7 @@ services:
     links:
       - db
     volumes:
-      - "./web:/var/www/html"
+      - "../redux-sample:/var/www/html"
   pma:
     image: "phpmyadmin/phpmyadmin"
     links:
